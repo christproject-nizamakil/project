@@ -22,7 +22,8 @@
         <activity
             android:name=".testTODelete"
             android:label="@string/title_activity_test_todelete"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Junior_yao.Junior_profileActivity"></activity>
     </application>
 
 </manifest>
