@@ -3,6 +3,8 @@ package com.always.work_hard_junior_yao.christ_project_nizamakil.Freeman;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.always.work_hard_junior_yao.christ_project_nizamakil.R;
+
 public class Freeman_Home extends AppCompatActivity {
 
     @Override
