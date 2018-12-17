@@ -8,7 +8,7 @@ public class Junior_FeedBack_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_junior__feed_back_activity);
+        //setContentView(R.layout.activity_junior__feed_back_activity);
 
 
     }
