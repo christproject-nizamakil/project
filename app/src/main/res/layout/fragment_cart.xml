@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="The Bag is Empty"
-        android:textSize="35dp"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    android:textSize="35dp"
         android:textStyle="bold"/>
 
 </FrameLayout>
