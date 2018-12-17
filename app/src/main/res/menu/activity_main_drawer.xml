@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="Profile"
+            android:id="@+id/Profile"
             android:icon="@drawable/account_icon"
             android:title="Profile" />
         <item
@@ -35,9 +35,9 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/Feedback"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Feedback" />
         </menu>
     </item>
 
