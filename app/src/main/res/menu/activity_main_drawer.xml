@@ -22,6 +22,8 @@
             android:title="Cart" />
         <item
             android:id="@+id/coin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Coins" />
     </group>
