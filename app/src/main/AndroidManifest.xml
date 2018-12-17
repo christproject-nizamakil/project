@@ -19,14 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".testTODelete"
-            android:label="@string/title_activity_test_todelete"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Junior_yao.Junior_profileActivity" />
-        s
-        <activity android:name=".Freeman.Freeman_Home" />
-        <activity android:name=".Junior_yao.Junior_FeedBack_activity"></activity>
+
     </application>
 
 </manifest>
