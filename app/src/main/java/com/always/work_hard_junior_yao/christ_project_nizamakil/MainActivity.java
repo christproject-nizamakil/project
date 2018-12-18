@@ -17,13 +17,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorFeedback_fragment;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorProfileFragment;
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.cartFragment.OnFragmentInteractionListener;
 
 import static android.os.Build.VERSION_CODES.O;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener,JuniorProfileFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener,JuniorProfileFragment.OnFragmentInteractionListener,JuniorFeedback_fragment.OnFragmentInteractionListener {
 FragmentTransaction fragmentTransaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,10 +105,13 @@ FragmentTransaction fragmentTransaction;
         }else if (id == R.id.coin) {
 
         }
+         else if (id == R.id.Feedback) {
 
-        else if (id == R.id.Profile) {
-
-        } else if (id == R.id.Feedback) {
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.contentMain,new JuniorFeedback_fragment());
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Feedback");
+            item.setChecked(true);
 
         }
 
