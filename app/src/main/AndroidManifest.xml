@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Junior_yao.Junior_profileActivity" />
-        <activity android:name=".Freeman.freeman_cart_activity"></activity>
+        <activity android:name=".Freeman.freeman_cart_activity" />
     </application>
 
 </manifest>
