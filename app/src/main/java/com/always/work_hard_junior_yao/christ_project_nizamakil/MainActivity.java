@@ -92,9 +92,9 @@ FragmentTransaction fragmentTransaction;
             getSupportActionBar().setTitle("Profile");
             item.setChecked(true);
 
-        } else if (id == R.id.order_history) {
+        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.About) {
+        } else if (id == R.id.Feedback) {
 
         } else if (id == R.id.car) {
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
