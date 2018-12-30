@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_order"
             android:title="Gallery" />
         <item
-            android:id="@+id/About"
-            android:icon="@drawable/ic_aboutus"
-            android:title="Slideshow" />
+            android:id="@+id/Contact_Us"
+            android:icon="@drawable/ic_contactus"
+            android:title="Contact Us" />
         <item
             android:id="@+id/car"
             android:icon="@drawable/ic_shopping_cart_black_24dp"
