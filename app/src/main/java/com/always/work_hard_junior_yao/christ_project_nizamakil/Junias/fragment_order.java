@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.always.work_hard_junior_yao.christ_project_nizamakil.R;
+
 public class fragment_order extends Fragment {
 
 
@@ -16,5 +18,6 @@ public class fragment_order extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_order, container, false);
+
     }
 }
