@@ -10,8 +10,8 @@
             android:title="Profile" />
         <item
             android:id="@+id/order_history"
-            android:icon="@drawable/ic_order"
-            android:title="Gallery" />
+            android:icon="@drawable/order1"
+            android:title="Order_History" />
         <item
             android:id="@+id/Contact_Us"
             android:icon="@drawable/ic_contactus"
