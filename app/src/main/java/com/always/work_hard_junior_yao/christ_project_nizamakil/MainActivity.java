@@ -134,7 +134,7 @@ private static final  int Request_call= 1;
         }
         else if (id== R.id.Contact_Us)
         {
-            String number="7349524729";
+            String number="+917349524729";
 
             if(number.trim().length() >0)
             {
