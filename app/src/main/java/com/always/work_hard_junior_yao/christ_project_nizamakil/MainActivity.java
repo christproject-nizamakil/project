@@ -79,7 +79,14 @@ private static final  int Request_call= 1;
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+
+        if (id== R.id.cart_button)
+
+        {
+            return true;
+        }
+        else if(id==R.id.search_button)
+        {
             return true;
         }
 
@@ -131,6 +138,8 @@ private static final  int Request_call= 1;
         else if(id == R.id.order_history)
         {
             getSupportFragmentManager().beginTransaction().replace(R.id.contentMain, new fragment_order()).commit();
+            getSupportActionBar().setTitle("Order_history");
+            item.setChecked(true);
         }
         else if (id== R.id.Contact_Us)
         {
