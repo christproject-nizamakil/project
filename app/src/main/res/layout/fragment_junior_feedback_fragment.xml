@@ -12,12 +12,12 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:background="#A6ffffff"
             android:id="@+id/editText"
             android:layout_width="290dp"
             android:layout_height="180dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="100dp"
+            android:background="#A6ffffff"
             android:ems="10"
 
             />
