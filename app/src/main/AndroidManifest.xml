@@ -22,7 +22,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Freeman.freeman_cart_activity" />
-        <activity android:name=".login_registration_pack.LoginActivity"></activity>
+        <activity android:name=".login_registration_pack.LoginActivity" />
+        <activity
+            android:name=".login_registration_pack.Register_activity"
+            android:label="@string/title_activity_register_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".login_registration_pack.Register_acti"></activity>
     </application>
 
 </manifest>
