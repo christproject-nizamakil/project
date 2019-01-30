@@ -103,8 +103,6 @@ private static final  int Request_call= 1;
 
         if (id == R.id.Profile) {
 
-        //fm.beginTransaction().replace(R.id.content_frame,new JuniorProfileFragment()).commit();
-
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.contentMain,new JuniorProfileFragment());
             fragmentTransaction.commit();
