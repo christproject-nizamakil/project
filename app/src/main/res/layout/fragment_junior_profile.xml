@@ -9,24 +9,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="80dp"
-        android:src="@drawable/ic_launcher_background"
-
+        android:src="@drawable/profile"
         />
 
     <TextView
+        android:textColor="#000"
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="80dp"
         android:layout_toRightOf="@id/img_profile"
-        android:text="Kouadio Yao Innocent Junior " />
+        android:text="Kouadio Yao Innocent Junior "
+        android:textSize="28sp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,43 +37,53 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="16dp"
         android:layout_toRightOf="@id/img_profile"
-        android:text="coins  "
-        android:id="@+id/coins"/>
+        android:text="coins : "
+        android:id="@+id/coins"
+        android:textSize="28sp"
+        android:textColor="#2F4F4F"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4533"
         android:layout_toRightOf="@+id/coins"
         android:layout_marginLeft="16dp"
-        android:textSize="15sp"
+        android:textSize="28sp"
         android:layout_below="@+id/userName"
         android:layout_marginTop="16dp"
         android:autoSizeTextType="uniform"
+        android:textColor="#808080"
         />
 
     <RelativeLayout
 
         android:layout_below="@+id/img_profile"
-        android:background="#AFFFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         >
+    </RelativeLayout>
 
-        <RelativeLayout
-        android:id="@+id/change_data"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
+    <Button
+        android:id="@+id/request_admin"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_profile"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="64dp"
+        android:text="Request Adminitration "
         />
 
-        <RelativeLayout
-            android:layout_below="@+id/change_data"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:text=" Request Adminitrator "
-            />
-
-    </RelativeLayout>
+    <Button
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/request_admin"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="24dp"
+        android:text="Change Password "
+        />
 
 
 
