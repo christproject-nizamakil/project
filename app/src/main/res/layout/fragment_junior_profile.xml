@@ -64,6 +64,7 @@
     </RelativeLayout>
 
     <Button
+        android:onClick="testing"
         android:id="@+id/request_admin"
         android:layout_width="300dp"
         android:layout_centerHorizontal="true"

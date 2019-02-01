@@ -12,75 +12,62 @@
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="18dp"
+        android:layout_height="78dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="User ID"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="478dp" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="299dp"
-        android:layout_marginBottom="11dp"
+        android:layout_height="78dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Password"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <EditText
         android:id="@+id/editText5"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="12dp"
+        android:layout_height="78dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Confirm password"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="388dp" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="15dp"
+        android:layout_height="78dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Phone number"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="573dp" />
 
     <Button
-        android:background="@drawable/rounded_buttonblue"
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
+        android:background="@drawable/rounded_buttonblue"
         android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="666dp" />
 
 </android.support.constraint.ConstraintLayout>

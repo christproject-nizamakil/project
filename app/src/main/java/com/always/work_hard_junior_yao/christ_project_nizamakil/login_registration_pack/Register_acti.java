@@ -3,6 +3,8 @@ package com.always.work_hard_junior_yao.christ_project_nizamakil.login_registrat
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.always.work_hard_junior_yao.christ_project_nizamakil.R;
+
 public class Register_acti extends AppCompatActivity {
 
     @Override
