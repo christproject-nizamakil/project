@@ -1,5 +1,6 @@
 package com.always.work_hard_junior_yao.christ_project_nizamakil.login_registration_pack;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -24,10 +25,16 @@ public class Register_acti extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText Email, Password,c_password ;
     Button registration ;
+    private ProgressDialog pd ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_acti);
+
+
+        //loading bar
+        pd = new ProgressDialog(this );
+
         // Initialize Firebase Auth
 
         mAuth = FirebaseAuth.getInstance();
@@ -72,7 +79,11 @@ public class Register_acti extends AppCompatActivity {
             return;
         }
         else {
-
+            //loading bar
+            pd.setTitle("Creating your account ");
+            pd.setMessage("Please Wait");
+            pd.setCanceledOnTouchOutside(true);
+            pd.show();
             mAuth.createUserWithEmailAndPassword(email,password1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -81,13 +92,17 @@ public class Register_acti extends AppCompatActivity {
                         // Sign in success, update UI with the signed-in user's information
                         Toast.makeText(Register_acti.this, "Account Created",
                                 Toast.LENGTH_LONG).show();
+                        pd.dismiss();
                         Intent i = new Intent(getBaseContext(),LoginActivity.class);
                         startActivity(i);
                         FirebaseUser user = mAuth.getCurrentUser();
                     } else {
                         // If sign in fails, display a message to the user.
+                        pd.dismiss();
                         Toast.makeText(Register_acti.this, task.getException().toString(),
                                 Toast.LENGTH_LONG).show();
+
+                        return;
                     }
 
                 }

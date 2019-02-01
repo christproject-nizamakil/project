@@ -31,6 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/password1"
         android:layout_width="0dp"
         android:layout_height="65dp"
@@ -42,7 +43,6 @@
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/Con_password1"
@@ -51,6 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/email1" />
 
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/Con_password1"
         android:layout_width="0dp"
         android:layout_height="65dp"
@@ -62,7 +63,6 @@
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:hint="Confirm password"
-        android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/reg"

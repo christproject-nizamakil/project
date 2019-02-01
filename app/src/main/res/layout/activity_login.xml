@@ -19,8 +19,9 @@
         android:layout_marginBottom="82dp"
         />
     <EditText
+        android:inputType="textPassword"
         android:textColor="@color/colorAccent"
-        android:id="@+id/userid"
+        android:id="@+id/password"
         android:layout_marginBottom="24dp"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/Login"
@@ -31,10 +32,11 @@
         android:background="@drawable/rounded_button"
         />
     <EditText
+        android:id="@+id/email"
         android:textColor="@color/colorAccent"
         android:layout_marginBottom="8dp"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/userid"
+        android:layout_above="@+id/password"
         android:textAlignment="center"
         android:hint="Email ID"
         android:layout_width="300dp"
