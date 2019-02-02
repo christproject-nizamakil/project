@@ -2,15 +2,12 @@ package com.always.work_hard_junior_yao.christ_project_nizamakil.login_registrat
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.MainActivity;
@@ -73,8 +70,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
 
                         }
-
-                        // ...
                     }
                 });
     }
