@@ -2,21 +2,18 @@ package com.always.work_hard_junior_yao.christ_project_nizamakil.login_registrat
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,13 +36,11 @@ public class Register_acti extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
         Email= findViewById(R.id.email1);
         Password = findViewById(R.id.password1);
         c_password =findViewById(R.id.Con_password1);
         registration=findViewById(R.id.reg);
-
-
         registration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,16 +53,15 @@ public class Register_acti extends AppCompatActivity {
 
     }
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     private void Oncreatenewaccount() {
 
         String password1=Password.getText().toString().trim() ;
         String cpassword=c_password.getText().toString().trim();
         String email = Email.getText().toString().trim();
-        if(password1.equals(cpassword))
-        {
+        if(password1.equals(cpassword)) {
             password1 = Password.getText().toString();
-        }
-        else {
+        } else {
             Toast.makeText(this, "password do not match", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -77,8 +71,7 @@ public class Register_acti extends AppCompatActivity {
 
             Toast.makeText(this, "Fill the form", Toast.LENGTH_LONG).show();
             return;
-        }
-        else {
+        } else {
             //loading bar
             pd.setTitle("Creating your account ");
             pd.setMessage("Please Wait");
