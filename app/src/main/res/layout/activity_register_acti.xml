@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@drawable/egister_background"
     tools:context=".login_registration_pack.Register_acti"
@@ -10,76 +10,58 @@
 
 
     <EditText
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/password1"
         android:id="@+id/email1"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="405dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:hint="Email ID"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/password1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/colorAccent" />
 
     <EditText
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/Con_password1"
         android:inputType="textPassword"
         android:id="@+id/password1"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:hint="Password"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/Con_password1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email1" />
+        android:textColor="@color/colorAccent" />
 
     <EditText
+        android:layout_width="300dp"
+        android:layout_height="55dp"
         android:inputType="textPassword"
         android:id="@+id/Con_password1"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:layout_marginBottom="36dp"
+        android:layout_above="@+id/reg"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_button"
         android:ems="10"
         android:hint="Confirm password"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/reg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password1" />
+        android:textColor="@color/colorAccent" />
 
     <Button
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:id="@+id/reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_buttonblue"
         android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Con_password1" />
+        android:layout_marginBottom="36dp" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

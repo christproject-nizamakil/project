@@ -20,7 +20,7 @@
             android:background="#A6ffffff"
             android:ems="10"
 
-            />
+            android:gravity="start" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_marginTop="20dp"

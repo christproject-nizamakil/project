@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".login_registration_pack.LoginActivity">
+        <activity android:name=".login_registration_pack.ResetPassword"></activity>
+        <activity android:name=".login_registration_pack.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,12 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Freeman.freeman_cart_activity" />
+        <activity android:name=".login_registration_pack.Register_acti" />
         <activity
-            android:name=".login_registration_pack.Register_acti" />
-        <activity android:name=".MainActivity"
-
+            android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
