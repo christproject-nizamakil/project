@@ -11,7 +11,6 @@
     android:id="@+id/contentMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-</FrameLayout>
 
 
     <ViewFlipper
@@ -24,11 +23,13 @@
 
 
     <RelativeLayout
+        android:layout_marginTop="300dp"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:id="@+id/relative1"
-        android:layout_below="@+id/auto_image">
+        >
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
@@ -47,7 +48,7 @@
 
 
     </RelativeLayout>
-
+</FrameLayout>
 
 
 

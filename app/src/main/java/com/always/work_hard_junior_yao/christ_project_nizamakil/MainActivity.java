@@ -146,6 +146,7 @@ private  RecyclerView.LayoutManager layoutManager;
             getSupportActionBar().setTitle("Profile");
             item.setChecked(true);
 
+
         } else if (id == R.id.nav_share) {
 
         }
@@ -197,6 +198,12 @@ private  RecyclerView.LayoutManager layoutManager;
             {
                 Toast.makeText(this, "call again", Toast.LENGTH_SHORT).show();
             }
+
+        }
+        else if(id==R.id.Home)
+        {
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
 
         }
 
