@@ -1,17 +1,21 @@
 package com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.R;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.login_registration_pack.LoginActivity;
-import com.always.work_hard_junior_yao.christ_project_nizamakil.login_registration_pack.Register_acti;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class JuniorProfileFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -24,6 +28,7 @@ public class JuniorProfileFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
 
     public JuniorProfileFragment() {
         // Required empty public constructor
@@ -41,18 +46,49 @@ public class JuniorProfileFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
+
+
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          View v = inflater.inflate(R.layout.fragment_junior_profile, container, false);
+
+        //firebase connection
+        final FirebaseAuth firebaseAuth;
+        FirebaseUser firebaseUser;
+        TextView email_opti;
+        NavigationView navigationView;
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        email_opti = v.findViewById(R.id.textemail123);
+        String email3 = firebaseUser.getEmail();
+        email_opti.setText(email3);
+
+        //Sign out
+        Button logout = v.findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(getContext(), LoginActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
+        });
                 return v ;
     }
 
