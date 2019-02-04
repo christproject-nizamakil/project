@@ -13,6 +13,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.telecom.Call;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -23,7 +25,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junias.fragment_order;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorFeedback_fragment;
@@ -31,11 +35,17 @@ import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.Junio
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.cartFragment.OnFragmentInteractionListener;
 
+import java.util.ArrayList;
+
 import static android.os.Build.VERSION_CODES.O;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener,JuniorProfileFragment.OnFragmentInteractionListener,JuniorFeedback_fragment.OnFragmentInteractionListener {
 FragmentTransaction fragmentTransaction;
 private static final  int Request_call= 1;
+private ViewFlipper viewFlipper;
+private RecyclerView recyclerView1;
+private RecyclerView.Adapter adapter;
+private  RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,31 @@ private static final  int Request_call= 1;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ArrayList<ContentItems> ContentList= new ArrayList<>();
+        ContentList.add(new ContentItems(R.drawable.imag1, " Miggos Christ", "Open 24/7"));
+        ContentList.add(new ContentItems(R.drawable.imag2, " Block4 Christ", "Open 24/7"));
+        ContentList.add(new ContentItems(R.drawable.imag3, " Central Block Christ", "Open 24/7"));
+
+        recyclerView1= (RecyclerView)findViewById(R.id.RecyclerView);
+        recyclerView1.setHasFixedSize(true);
+        layoutManager= new LinearLayoutManager(this);
+        adapter= new ContentAdapter(ContentList);
+
+
+        recyclerView1.setLayoutManager(layoutManager);
+        recyclerView1.setAdapter(adapter);
+
+
+
+        int images[]= {R.drawable.im1, R.drawable.im2, R.drawable.im3};
+
+        viewFlipper =(ViewFlipper)findViewById(R.id.auto_image);
+        for(int i=0; i< images.length; i++ )
+        {
+            flipperImages(images[i]);
+        }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,6 +87,8 @@ private static final  int Request_call= 1;
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -170,6 +207,23 @@ private static final  int Request_call= 1;
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    public  void flipperImages(int image)
+    {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        viewFlipper.addView(imageView);
+        viewFlipper.setFlipInterval(4000);
+        viewFlipper.setAutoStart(true);
+        viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
+        viewFlipper.setOutAnimation(this,android.R.anim.slide_out_right);
+
+
+
+
+
 
     }
 
