@@ -52,10 +52,7 @@ private  RecyclerView.LayoutManager layoutManager;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //// fire base connection
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ArrayList<ContentItems> ContentList= new ArrayList<>();
