@@ -31,11 +31,22 @@
         />
 
     <TextView
+        android:id="@+id/textemail123"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/userName"
         android:layout_marginLeft="22dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="08dp"
+        android:layout_toRightOf="@id/img_profile"
+        android:textAppearance="@style/Widget.MaterialComponents.Toolbar"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="32dp"
         android:layout_toRightOf="@id/img_profile"
         android:text="coins : "
         android:id="@+id/coins"
@@ -50,7 +61,7 @@
         android:layout_marginLeft="16dp"
         android:textSize="28sp"
         android:layout_below="@+id/userName"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:autoSizeTextType="uniform"
         android:textColor="#808080"
         />
@@ -86,6 +97,7 @@
         />
 
     <Button
+        android:id="@+id/logout"
         android:layout_width="150dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"

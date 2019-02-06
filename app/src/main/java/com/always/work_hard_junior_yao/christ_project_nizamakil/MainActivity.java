@@ -6,38 +6,33 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.telecom.Call;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junias.fragment_order;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorFeedback_fragment;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorProfileFragment;
-
 import com.always.work_hard_junior_yao.christ_project_nizamakil.cartFragment.OnFragmentInteractionListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
-
-import static android.os.Build.VERSION_CODES.O;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener,JuniorProfileFragment.OnFragmentInteractionListener,JuniorFeedback_fragment.OnFragmentInteractionListener {
 FragmentTransaction fragmentTransaction;
@@ -47,18 +42,25 @@ private RecyclerView recyclerView1;
 private RecyclerView.Adapter adapter;
 private  RecyclerView.LayoutManager layoutManager;
 
+    //firebase connection
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
+    TextView email_opti;
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ArrayList<ContentItems> ContentList= new ArrayList<>();
         ContentList.add(new ContentItems(R.drawable.imag1, " Miggos Christ", "Open 24/7"));
         ContentList.add(new ContentItems(R.drawable.imag2, " Block4 Christ", "Open 24/7"));
         ContentList.add(new ContentItems(R.drawable.imag3, " Central Block Christ", "Open 24/7"));
 
-        recyclerView1= (RecyclerView)findViewById(R.id.RecyclerView);
+        recyclerView1 = findViewById(R.id.RecyclerView);
         recyclerView1.setHasFixedSize(true);
         layoutManager= new LinearLayoutManager(this);
         adapter= new ContentAdapter(ContentList);
@@ -71,29 +73,25 @@ private  RecyclerView.LayoutManager layoutManager;
 
         int images[]= {R.drawable.im1, R.drawable.im2, R.drawable.im3};
 
-        viewFlipper =(ViewFlipper)findViewById(R.id.auto_image);
+        viewFlipper = findViewById(R.id.auto_image);
         for(int i=0; i< images.length; i++ )
         {
             flipperImages(images[i]);
         }
 
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
 
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -207,7 +205,7 @@ private  RecyclerView.LayoutManager layoutManager;
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -233,7 +231,5 @@ private  RecyclerView.LayoutManager layoutManager;
 
 
     }
-
-
 
 }

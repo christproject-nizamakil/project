@@ -10,6 +10,8 @@
 
 
     <EditText
+        android:imeOptions="actionNext"
+        android:singleLine="true"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_above="@+id/password1"
@@ -25,6 +27,8 @@
         android:textColor="@color/colorAccent" />
 
     <EditText
+        android:imeOptions="actionNext"
+        android:singleLine="true"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_above="@+id/Con_password1"
@@ -40,6 +44,8 @@
         android:textColor="@color/colorAccent" />
 
     <EditText
+        android:imeOptions="actionDone"
+        android:singleLine="true"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:inputType="textPassword"
