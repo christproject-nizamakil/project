@@ -15,7 +15,7 @@
 
     <ViewFlipper
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/auto_image"
 
@@ -23,10 +23,11 @@
 
 
     <RelativeLayout
-        android:layout_marginTop="390dp"
+
+        android:layout_marginTop="350dp"
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/relative1"
         >
