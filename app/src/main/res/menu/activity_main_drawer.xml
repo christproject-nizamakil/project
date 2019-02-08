@@ -4,10 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/Profile"
-            android:icon="@drawable/account_icon"
-            android:title="Profile" />
+
         <item
             android:id="@+id/Home"
             android:icon="@drawable/ic_home"
@@ -16,6 +13,12 @@
 
 
             />
+
+        <item
+            android:id="@+id/Profile"
+            android:icon="@drawable/account_icon"
+            android:title="Profile" />
+
         <item
             android:id="@+id/order_history"
             android:icon="@drawable/ic_order"
