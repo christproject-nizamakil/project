@@ -56,7 +56,7 @@ private  RecyclerView.LayoutManager layoutManager;
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ArrayList<ContentItems> ContentList= new ArrayList<>();
-        ContentList.add(new ContentItems(R.drawable.imag1, " Miggos Christ", "Open 24/7"));
+        ContentList.add(new ContentItems(R.drawable.mingos, " Miggos Christ", "Open 24/7"));
         ContentList.add(new ContentItems(R.drawable.imag2, " Block4 Christ", "Open 24/7"));
         ContentList.add(new ContentItems(R.drawable.imag3, " Central Block Christ", "Open 24/7"));
 
@@ -71,7 +71,7 @@ private  RecyclerView.LayoutManager layoutManager;
 
 
 
-        int images[]= {R.drawable.im1, R.drawable.im2, R.drawable.im3};
+        int images[]= {R.drawable.im1, R.drawable.im2, R.drawable.imag4};
 
         viewFlipper = findViewById(R.id.auto_image);
         for(int i=0; i< images.length; i++ )
