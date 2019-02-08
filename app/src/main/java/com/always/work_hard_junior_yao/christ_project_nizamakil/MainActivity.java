@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.always.work_hard_junior_yao.christ_project_nizamakil.Freeman.Coins_for_bokit;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junias.fragment_order;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorFeedback_fragment;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorProfileFragment;
@@ -34,7 +35,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener,JuniorProfileFragment.OnFragmentInteractionListener,JuniorFeedback_fragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnFragmentInteractionListener, JuniorProfileFragment.OnFragmentInteractionListener, JuniorFeedback_fragment.OnFragmentInteractionListener, Coins_for_bokit.OnFragmentInteractionListener {
 FragmentTransaction fragmentTransaction;
 private static final  int Request_call= 1;
 private ViewFlipper viewFlipper;
@@ -47,6 +48,8 @@ private  RecyclerView.LayoutManager layoutManager;
     FirebaseUser firebaseUser;
     TextView email_opti;
     NavigationView navigationView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,13 +146,9 @@ private  RecyclerView.LayoutManager layoutManager;
             fragmentTransaction.commit();
             getSupportActionBar().setTitle("Profile");
             item.setChecked(true);
-
-
         } else if (id == R.id.nav_share) {
 
-        }
-
-        else if (id == R.id.car) {
+        } else if (id == R.id.cart) {
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.cartcontainer,new cartFragment());
         fragmentTransaction.commit();
@@ -158,6 +157,11 @@ private  RecyclerView.LayoutManager layoutManager;
         }
 
         else if (id == R.id.coin) {
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.contentMain, new Coins_for_bokit());
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Profile");
+            item.setChecked(true);
 
         }
          else if (id == R.id.Feedback) {
