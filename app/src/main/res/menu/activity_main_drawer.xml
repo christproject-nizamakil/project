@@ -24,10 +24,6 @@
             android:icon="@drawable/ic_order"
             android:title="Order_History" />
         <item
-            android:id="@+id/Contact_Us"
-            android:icon="@drawable/ic_contactus"
-            android:title="Contact Us" />
-        <item
             android:id="@+id/car"
             android:icon="@drawable/ic_shopping_cart_black_24dp"
             android:title="Cart" />
@@ -37,6 +33,11 @@
             android:layout_height="match_parent"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Coins" />
+        <item
+            android:id="@+id/Contact_Us"
+            android:icon="@drawable/ic_contactus"
+            android:title="Contact Us" />
+
     </group>
 
     <item android:title="Communicate">
