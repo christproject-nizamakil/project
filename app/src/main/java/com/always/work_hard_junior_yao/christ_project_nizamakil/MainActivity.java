@@ -25,7 +25,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.always.work_hard_junior_yao.christ_project_nizamakil.Freeman.Coins_for_bokit;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junias.fragment_order;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorFeedback_fragment;
 import com.always.work_hard_junior_yao.christ_project_nizamakil.Junior_yao.JuniorProfileFragment;
@@ -35,25 +34,28 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnFragmentInteractionListener, JuniorProfileFragment.OnFragmentInteractionListener, JuniorFeedback_fragment.OnFragmentInteractionListener, Coins_for_bokit.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnFragmentInteractionListener,JuniorProfileFragment.OnFragmentInteractionListener,JuniorFeedback_fragment.OnFragmentInteractionListener {
 FragmentTransaction fragmentTransaction;
 private static final  int Request_call= 1;
 private ViewFlipper viewFlipper;
-private RecyclerView recyclerView1;
+private RecyclerView recyclerView1, recyclerView2;
 private RecyclerView.Adapter adapter;
 private  RecyclerView.LayoutManager layoutManager;
+
+private RecyclerView.Adapter adapter1;
+private RecyclerView.LayoutManager layoutManager1;
 
     //firebase connection
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     TextView email_opti;
     NavigationView navigationView;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -63,14 +65,34 @@ private  RecyclerView.LayoutManager layoutManager;
         ContentList.add(new ContentItems(R.drawable.imag2, " Block4 Christ", "Open 24/7"));
         ContentList.add(new ContentItems(R.drawable.imag3, " Central Block Christ", "Open 24/7"));
 
+
+
         recyclerView1 = findViewById(R.id.RecyclerView);
         recyclerView1.setHasFixedSize(true);
         layoutManager= new LinearLayoutManager(this);
         adapter= new ContentAdapter(ContentList);
-
-
         recyclerView1.setLayoutManager(layoutManager);
         recyclerView1.setAdapter(adapter);
+
+
+
+
+        ArrayList<cart_items> CartList = new ArrayList<>();
+        CartList.add(new cart_items(R.drawable.im1,"Block four","Bryanni","1",1,2));
+        CartList.add(new cart_items(R.drawable.im2,"Block four","Bryanni","1",1,2));
+        CartList.add(new cart_items(R.drawable.imag4,"Block four","Bryanni","1",1,1));
+
+
+        recyclerView2 = findViewById(R.id.recyclecart);
+        //recyclerView2.setHasFixedSize(true);
+        layoutManager1= new LinearLayoutManager(this);
+        adapter1= new cartAdapter(CartList);
+
+
+
+
+        recyclerView2.setLayoutManager(layoutManager1);
+        recyclerView2.setAdapter(adapter1);
 
 
 
@@ -146,22 +168,21 @@ private  RecyclerView.LayoutManager layoutManager;
             fragmentTransaction.commit();
             getSupportActionBar().setTitle("Profile");
             item.setChecked(true);
+
+
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.cart) {
+        }
+
+        else if (id == R.id.cart) {
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.cartcontainer,new cartFragment());
+        fragmentTransaction.replace(R.id.cartcontainer,new fragment_junias_cart());
         fragmentTransaction.commit();
         getSupportActionBar().setTitle("Cart");
         item.setChecked(true);
         }
 
         else if (id == R.id.coin) {
-            fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.contentMain, new Coins_for_bokit());
-            fragmentTransaction.commit();
-            getSupportActionBar().setTitle("Profile");
-            item.setChecked(true);
 
         }
          else if (id == R.id.Feedback) {
@@ -235,5 +256,12 @@ private  RecyclerView.LayoutManager layoutManager;
 
 
     }
+
+
+
+
+
+
+
 
 }
