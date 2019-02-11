@@ -149,12 +149,15 @@ private  RecyclerView.LayoutManager layoutManager;
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.cart) {
-        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.cartcontainer,new cartFragment());
-        fragmentTransaction.commit();
-        getSupportActionBar().setTitle("Cart");
-        item.setChecked(true);
-        } else if (id == R.id.coins) {
+
+            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.contentMain,new fragment_amir_cart());
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle("Cart");
+            item.setChecked(true);
+        }
+
+        else if (id == R.id.coins) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.contentMain, new Coins_for_bokit());
             fragmentTransaction.commit();
