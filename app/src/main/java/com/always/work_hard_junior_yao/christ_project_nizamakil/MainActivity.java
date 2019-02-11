@@ -154,9 +154,7 @@ private  RecyclerView.LayoutManager layoutManager;
         fragmentTransaction.commit();
         getSupportActionBar().setTitle("Cart");
         item.setChecked(true);
-        }
-
-        else if (id == R.id.coin) {
+        } else if (id == R.id.coins) {
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.contentMain, new Coins_for_bokit());
             fragmentTransaction.commit();
