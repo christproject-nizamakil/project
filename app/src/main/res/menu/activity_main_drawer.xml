@@ -25,7 +25,7 @@
             android:icon="@drawable/ic_shopping_cart_black_24dp"
             android:title="Cart" />
         <item
-            android:id="@+id/coin"
+            android:id="@+id/coins"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Coins" />
         <item
