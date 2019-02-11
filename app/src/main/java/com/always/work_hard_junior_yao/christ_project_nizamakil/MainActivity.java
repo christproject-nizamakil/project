@@ -158,7 +158,7 @@ private  RecyclerView.LayoutManager layoutManager;
             fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.contentMain, new Coins_for_bokit());
             fragmentTransaction.commit();
-            getSupportActionBar().setTitle("Profile");
+            getSupportActionBar().setTitle("Coins");
             item.setChecked(true);
 
         }
