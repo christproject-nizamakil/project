@@ -1,5 +1,7 @@
 package com.always.work_hard_junior_yao.christ_project_nizamakil;
 
+import android.widget.Button;
+
 public class cart_items {
 
     private int imageRa;
@@ -48,6 +50,8 @@ public class cart_items {
     {
         return btn2;
     }
+
+
 
 }
 
