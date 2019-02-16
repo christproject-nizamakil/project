@@ -87,7 +87,7 @@
                 android:layout_below="@+id/textView3"
                 android:layout_marginLeft="315dp"
                 android:layout_marginTop="4dp"
-                android:id="@+id/textView4"
+                android:id="@+id/carttextview"
 
                 android:text="1"
                 android:textSize="20sp" />
